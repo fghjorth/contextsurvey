@@ -1,10 +1,22 @@
-# contextsurvey
+# Survey om lokale kontekster
 
-Tak skal du have. Jeg har vedhæftet filerne (først og fremmest gsurvey.php), men her et overblik: surveyet ligger i pilotform på http://konteksttest.dreamhosters.com/gsurvey.php . Prøv det evt. af.
+Dette repository præsenterer den kode, der producerer surveyet på http://konteksttest.dreamhosters.com/gsurvey.php. Surveyet, som lige nu ikke fungerer, skal i bund og grund gøre tre ting:
 
-Som du kan se skal man bruge google maps til at tegne sit nabolag og svare på nogle spørgsmål. Vi vil gerne gemme folks svar i en database, selvfølgelig inkl. en liste af lat-long-koordinator der definerer den polygon, de har tegnet.
+1. Stille respondenten nogle helt enkle spørgsmål, typisk på skalaer fra 1-5
+2. Få respondenten til at tegne omridset af sit nabolag på et interaktivt kort
+3. Gemme svarene og polygonen, der definerer nabolaget, i en database
 
-Jeg baserer koden på fungerende kode, jeg har fået af en britisk kollega. Jeg kan en smule programmering og html, så php virker genkendeligt nok. SQL er til gengæld meget fremmed for mig, så måske jeg har lavet en helt fundamental fejl i SQL.
+Repo'et indeholder følgende filer:
+
+1. `adddata.php` - side der gemmer data i MySQL-databasen
+2. `dbinfo.php` - info om databasen
+3. `gsurvey.php` - startsiden, der også indeholder javascript-kode for Google Maps-kortet og koden der gemmer koordinaterne i et array, jf. nedenfor
+4. `kulogo.jpg` - KU's logo, til surveyets forside
+5. `stylesheet.css` - stylesheet til surveyet
+
+## Gennemgang af `gsurvey.php`
+
+Jeg baserer koden på fungerende kode, jeg har fået af en britisk kollega. Jeg kan en smule programmering og html, så php virker genkendeligt nok. SQL er til gengæld meget fremmed for mig, så måske jeg har lavet en helt fundamental fejl i SQL (!).
 
 Logikken helt overordnet: jeg definerer en array der hedder polyPoints. Når respondenten har tegnet polygonen færdig skal polygonens koordinater pushes til polyPoints (sidste linje her):
 
