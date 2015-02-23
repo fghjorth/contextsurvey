@@ -6,6 +6,8 @@ Dette repository præsenterer den kode, der producerer surveyet på http://konte
 2. Få respondenten til at tegne omridset af sit nabolag på et interaktivt kort
 3. Gemme svarene og polygonen, der definerer nabolaget, i en database
 
+Det centrale er at surveyet kan dette - ikke præcis hvordan. Det nuværende setup baserer sig på kode, jeg har fået af en britisk kollega (men som brugte Google Maps API v2). Jeg kan en smule programmering og html, så php-koden virker genkendelig nok, og er ret enkel at tilpasse. SQL er til gengæld meget fremmed for mig, så måske jeg har lavet en helt fundamental fejl i SQL-koden (!).
+
 Repo'et indeholder følgende filer:
 
 1. `adddata.php` - side der gemmer data i MySQL-databasen
@@ -15,8 +17,6 @@ Repo'et indeholder følgende filer:
 5. `stylesheet.css` - stylesheet til surveyet
 
 ## Gennemgang af `gsurvey.php`
-
-Jeg baserer koden på fungerende kode, jeg har fået af en britisk kollega. Jeg kan en smule programmering og html, så php virker genkendeligt nok. SQL er til gengæld meget fremmed for mig, så måske jeg har lavet en helt fundamental fejl i SQL (!).
 
 Logikken helt overordnet: jeg definerer en array der hedder polyPoints. Når respondenten har tegnet polygonen færdig skal polygonens koordinater pushes til polyPoints (sidste linje her):
 
