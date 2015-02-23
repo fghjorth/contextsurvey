@@ -1,0 +1,51 @@
+body {
+    font-family: Times New Roman, serif;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+.main {
+    position: absolute;
+    width: 750px;
+    left: 50px;
+    top: 10px;
+}
+.mainwide {
+    position: absolute;
+    width: 1000px;
+    left: 50px;
+    top: 10px;
+}
+.mainwithin {
+    position: static;
+    width: 750px;
+    left: 0px;
+    top: 0px;
+}
+p {
+    font-family: Times New Roman, serif;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+.red {
+    color: #cc0000;
+}
+td {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    padding-left: 0px;
+}
+.l10 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    padding-left: 10px;
+}
+.r10 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    padding-right: 10px;
+}
