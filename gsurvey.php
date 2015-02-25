@@ -129,9 +129,16 @@ function parse_coords(){
 //  var retval = validate_form();
 //  if (retval == true)
 //  {
-    for (var i = 0; i<(polyPoints.length); i++) {
-          var lat = polyPoints[i].lat();
-          var longi = polyPoints[i].lng();
+    // polyPoints er et array
+    for (var i = 0; i<(polyPoints[0].getPath().getLength()); i++) {
+          //var lat = polyPoints[i].lat();
+          //var longi = polyPoints[i].lng();
+	
+	  // Gammelt API i ovenstående?
+	  // SE: https://developers.google.com/maps/documentation/javascript/examples/polygon-arrays
+	  var lat = polyPoints[0].getPath().getAt(i).lat();
+	  var longi = polyPoints[0].getPath().getAt(i).lng();
+
           addCoords(i, lat, longi);
     }
     //alert ('out of parse co-ords');
@@ -166,7 +173,6 @@ function changevis(oldchoice,newchoice) {
 
 <br>
 
-
 <?php
 //generate new row in questdata table and retrieve value of respid.
 //respid is auto-incremented for each new row.
@@ -189,7 +195,6 @@ $result=mysql_query($query);
 $respid=mysql_insert_id();
 echo "<input type='text' name='respid' id='respid' value=$respid style='display:none'>"
 ?>
-
 
 <div id="page1">
 
