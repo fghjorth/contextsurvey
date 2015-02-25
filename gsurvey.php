@@ -173,7 +173,6 @@ function changevis(oldchoice,newchoice) {
 
 <br>
 
-<!--
 <?php
 //generate new row in questdata table and retrieve value of respid.
 //respid is auto-incremented for each new row.
@@ -196,7 +195,6 @@ $result=mysql_query($query);
 $respid=mysql_insert_id();
 echo "<input type='text' name='respid' id='respid' value=$respid style='display:none'>"
 ?>
--->
 
 <div id="page1">
 
